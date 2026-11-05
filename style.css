@@ -123,6 +123,8 @@ em{font-style:italic;color:var(--rust)}
 .l-head{padding:12px 0;border-bottom:1px solid var(--ink);font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .l-row{padding:34px 0 36px;border-bottom:1px solid var(--rule)}
 .l-last{border-bottom:5px double var(--ink)}
+.l-row:target{background:var(--paper);box-shadow:inset 4px 0 0 var(--rust)}
+.l-row:target .l-no{padding-left:14px}
 .l-no{font-family:var(--mono);font-size:.95rem;color:var(--rust);padding-top:.5em}
 .l-row h3{margin-bottom:.35em}
 .l-row p{color:var(--muted);margin:0;max-width:24em}
