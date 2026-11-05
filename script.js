@@ -22,6 +22,19 @@
     }
   });
 
+  // logo: smooth scroll back to the top (no reload, so the hero video keeps playing) and tidy the URL
+  var logo = document.querySelector('.mark');
+  logo.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    window.scrollTo(0, 0); // honours the page's smooth-scroll / reduced-motion setting
+    if (window.history && history.replaceState) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    paint();
+  });
+
   // hero video: only for visitors who have not asked for less motion or less data
   var v = document.querySelector('.hero-bg');
   var ctl = document.querySelector('.vctl');
